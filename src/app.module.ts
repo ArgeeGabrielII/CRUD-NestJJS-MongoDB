@@ -1,11 +1,13 @@
 import { Module } from '@nestjs/common';
-import { UsersModule } from './users/users.module';
+import { MongooseModule } from '@nestjs/mongoose';
 import { HealthModule } from './health/health.module';
-import { AuthModule } from './auth/auth.module';
-import { SharedService } from './shared/shared.service';
+import { UsersModule } from './users/users.module';
 
 @Module({
-  imports: [UsersModule, HealthModule, AuthModule],
-  providers: [SharedService],
+  imports: [
+    MongooseModule.forRoot(`${process.env.MONGODB_CONN}`),
+    HealthModule,
+    UsersModule,
+  ],
 })
 export class AppModule {}
