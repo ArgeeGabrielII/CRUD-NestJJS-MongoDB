@@ -34,6 +34,11 @@ $ npm install
 
 ## Running the app
 
+```makefile
+# local
+$ make start
+```
+
 ```bash
 # development
 $ npm run start
