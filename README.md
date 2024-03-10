@@ -35,11 +35,15 @@ Provided API Endpoints to Client:
 | ------ | ------------ | ------ | ----------- |
 | /POST  | /auth/signup | PUBLIC | Create an new User Account |
 | /POST  | /auth/login  | PUBLIC | Sign In an Existing User |
-| /GET   |              | PROTECTED | Logout Existing User |
-| /GET   |              |        |             |
-| /GET   |              |        |             |
-| /GET   |              |        |             |
-| /PATCH |              |        |             |
+| /GET   | /auth/logout | PROTECTED | Logout Existing User |
+| /GET   | /auth/refresh | PROTECTED | Refresh Auth Token |
+| /GET   | /users | PUBLIC | Get All Users |
+| /GET   | /users/:id | PUBLIC | Fetch a Single User |
+| /PATCH | /users/:id | PROTECTED | Update specific User's Detail |
+
+## Process Flow
+
+![Process Flow](https://github.com/ArgeeGabrielII/CRUD-NestJJS-MongoDB/blob/main/docs/nestjs-jwt-auth-refresh-token.svg)
 
 ## Installation
 
