@@ -24,7 +24,22 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+- Users can create new accounts and sign in with a username and password
+- User's Information will be stored into MongoDB
+- Only authenticated users can edit their information saved in the DB
+- A public route will fetch all users that signed up
+
+Provided API Endpoints to Client:
+
+| Method | API Endpoint | Access | Description |
+| ------ | ------------ | ------ | ----------- |
+| /POST  | /auth/signup | PUBLIC | Create an new User Account |
+| /POST  | /auth/login  | PUBLIC | Sign In an Existing User |
+| /GET   |              | PROTECTED | Logout Existing User |
+| /GET   |              |        |             |
+| /GET   |              |        |             |
+| /GET   |              |        |             |
+| /PATCH |              |        |             |
 
 ## Installation
 
